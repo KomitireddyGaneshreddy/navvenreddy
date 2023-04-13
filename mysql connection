@@ -1,0 +1,9 @@
+import mysql.connector as myc
+mydb=myc.connect(host="localhost",user="root",password="Reddy@90",database="pythoncon")
+mycursor=mydb.cursor()
+#mycursor.execute("select * from t1")
+mycursor.execute("insert into t1 values('charan','SRM') ")
+#mycursor.execute("select * from t1")
+for i in mycursor:
+    print(i)
+mydb.commit()
